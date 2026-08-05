@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <title>Travel Adventures by Eunice - Login Result</title>
+<style>
+  body { margin:0; font-family: 'Lora', serif; background:#F7F0E8; color:#4A3F35; display:flex; align-items:center; justify-content:center; min-height:100vh; }
+    .card { background:#fff; border:2px solid #C9A36A; border-radius:12px; padding:40px; max-width:520px; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+    h1 { color:#B87A5E; font-size:24px; }
+        p { color:#7D8A6A; word-break:break-all; }
+  .label { font-weight:bold; color:#4A3F35; }
+</style>
+  </head>
+  <body>
+    <div class="card">
+      <h1 id="heading">Checking login result...</h1>
+      <p><span class="label">Authorization code:</span><br><span id="code">-</span></p>
+      <p><span class="label">State:</span><br><span id="state">-</span></p>
+    </div>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    const state = params.get('state');
+    const error = params.get('error');
+    document.getElementById('heading').textContent = error ? 'Login failed' : (code ? 'Login successful!' : 'Waiting for TikTok redirect...');
+    document.getElementById('code').textContent = code || error || '-';
+    document.getElementById('state').textContent = state || '-';
+  </script>
+    </body>
+    </html>
