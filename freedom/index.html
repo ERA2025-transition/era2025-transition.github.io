@@ -26,7 +26,8 @@
   input[type=email]{padding:15px 16px;border:1.5px solid var(--line);border-radius:12px;font-size:16px;font-family:inherit;background:#fdfbf7}
   input[type=email]:focus{outline:none;border-color:var(--gold)}
   button{background:var(--ink);color:#fdfbf7;border:0;border-radius:12px;padding:16px;font-size:16px;font-weight:600;font-family:inherit;cursor:pointer}
-  .fine{color:var(--mut);font-size:12.5px;text-align:center;margin-top:2px}
+  .fine{color:var(--mut);font-size:12px;text-align:center;margin-top:4px;line-height:1.5}
+  .fine a{color:var(--gold);text-decoration:underline}
   .inside{margin:30px 2px 0}
   .inside h3{font-family:'Lora',serif;font-style:italic;font-size:19px;margin-bottom:12px}
   .inside ul{list-style:none}
@@ -56,12 +57,12 @@
       <div class="card">
         <h2>Send me the checklist</h2>
         <p class="small">Free. Straight to your inbox. Unsubscribe anytime.</p>
-        <form id="capture" method="POST" action="FREEDOM_FORM_ACTION" target="freedom_sink">
+        <form id="capture" method="POST" action="https://8463aa5f.sibforms.com/serve/MUIFANn0mHqUX-fXIXZlP7HMJ3lGN95GfC_M-AcSGuFNEO8jh0Xys4oDJ2CHxU2spUBUQbzpT_t3RYW7-Q9vIkGHxB9zP1-TQo24i-BXHZ83eWskh1smEX0crqxI0v1j9N0RfD0W2-AJ20up_dxJ6HZkGi7ThINBTAo1aIXX8InnMABCiKMxpEOAPD6suObQe863WNPHrBVM1veCHQ==" target="freedom_sink">
           <input type="email" name="EMAIL" placeholder="you@email.com" required autocomplete="email">
           <input type="text" name="email_address_check" value="" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
           <input type="hidden" name="locale" value="en">
           <button type="submit">Send me the checklist &nbsp;&#128073;</button>
-          <div class="fine">One page between you and the door. &#128308;</div>
+          <div class="fine">By subscribing you agree to receive emails from Travel Adventures by Eunice and to our <a href="/privacy.html">Privacy Policy</a>. Unsubscribe anytime. &#128308;</div>
         </form>
         <iframe name="freedom_sink" style="display:none" title="subscribe"></iframe>
       </div>
