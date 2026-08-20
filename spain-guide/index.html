@@ -272,19 +272,32 @@
   }
 
   var sent = false;
+  var posted = false;
   form.addEventListener('submit', function(e){
+    e.preventDefault();
     var email = document.getElementById('EMAIL');
     var optin = document.getElementById('OPT_IN');
     if(!email || !email.value || !optin || !optin.checked) return;
     if(sent) return;
     sent = true;
+    var done = function(){ window.location.href = 'thanks.html'; };
+    var go = function(){
+      if(posted) return;
+      posted = true;
+      fetch(form.getAttribute('action'), {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new URLSearchParams(new FormData(form))
+      }).then(done, done);
+    };
     if(typeof gtag === 'function'){
-      e.preventDefault();
       gtag('event','generate_lead',{
         method:'spain_lp', currency:'USD', value:0,
-        event_callback: function(){ form.submit(); }
+        event_callback: go
       });
-      setTimeout(function(){ form.submit(); }, 800);
+      setTimeout(go, 800);
+    } else {
+      go();
     }
   });
 })();
