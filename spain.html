@@ -58,8 +58,8 @@
 
 <main class="wrap">
 
-  <a class="row feature" href="https://era2025-transition.github.io/spain-guide/?utm_source=spain-hub&utm_medium=linktree&utm_campaign=spain2026">
-    <div class="t"><span>📩 Free Ultimate Spain Road Trip guide</span><span>&rsaquo;</span></div>
+  <a id="guideRow" class="row feature" href="https://era2025-transition.github.io/spain-guide/?utm_source=spain-hub&utm_medium=linktree&utm_campaign=spain2026">
+    <div class="t"><span id="guideTitle">📩 Free Ultimate Spain Road Trip guide</span><span>&rsaquo;</span></div>
     <div class="d">Five routes, the €200 driving mistake, and the permission slip.</div>
   </a>
 
@@ -72,7 +72,7 @@
 
   <div class="sect">Drive it</div>
 
-  <a target="_blank" rel="noopener sponsored" class="row" href="https://localrent.tpm.lv/RTOZD5gd?sub_id=spain-hub">
+  <a target="_blank" rel="noopener sponsored" class="row" href="https://localrent.tpm.lv/KGNeXF6H">
     <div class="t"><span>🚗 Rent the car</span><span>&rsaquo;</span></div>
     <div class="d">Book this before the hotels. Automatics sell out in Spain.</div>
   </a>
@@ -127,5 +127,16 @@
   </div>
 </footer>
 
+
+<script>
+(function(){
+  var src = new URLSearchParams(window.location.search).get('utm_source') || '';
+  if (src !== 'brevo' && src !== 'spain-guide') return;
+  var row = document.getElementById('guideRow'), title = document.getElementById('guideTitle');
+  if (!row) return;
+  row.href = 'https://era2025-transition.github.io/spain-guide/guide.html?utm_source=spain-hub&utm_medium=hub&utm_campaign=spain2026&utm_content=reopen';
+  if (title) title.textContent = '\u{1F4E9} Open your Spain road trip guide';
+})();
+</script>
 </body>
 </html>
