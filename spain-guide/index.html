@@ -136,15 +136,6 @@
     <p class="lede">Spain is the easiest big trip you will ever take. The roads are good, the coastal motorway is free now, and you can go from a Moorish palace to a cliff village to a beach dinner in one day. Most people never do it. Be the one who does.</p>
 
     <div class="card">
-      <!--
-        ============================================================
-        BREVO WIRING
-        Form action is wired to the Brevo Spain form.
-        Brevo expects the email field named EMAIL and the opt-in
-        checkbox named OPT_IN. Double opt-in is configured on the
-        Brevo side, not here. Keep the honeypot field as-is.
-        ============================================================
-      -->
       <form action="https://8463aa5f.sibforms.com/serve/MUIFAA9YUsOvNn4BXFyXZOny5H79CchTiCpANTinWX8HgXyvc8GLh360X8iEJbgrEel7wTcSBCKHt3NvdwNrPhcZQap_I3R99gvq_Ef_wf_7M7TYuO_Jg6YpiWcuk_DOOSMbYJTTyGhEh5RaechlnhaetRXYx2xv2ATpx73NB48ZvtjHCuWuVhUqdX6i1ZObB6kQPGpGMT6X6q-72A==" method="POST" novalidate>
         <label for="EMAIL">Your email</label>
         <input id="EMAIL" name="EMAIL" type="email" required autocomplete="email" placeholder="you@email.com">
@@ -160,6 +151,9 @@
         </div>
         <input type="hidden" name="locale" value="en">
         <input type="hidden" name="html_type" value="simple">
+        <input type="hidden" name="SOURCE" id="f_source" value="direct">
+        <input type="hidden" name="LEAD_DAY" id="f_day" value="">
+        <input type="hidden" name="CAMPAIGN" id="f_campaign" value="spain2026">
 
         <button class="btn btn-wide" type="submit">Send me the guide</button>
       </form>
@@ -300,6 +294,16 @@
       go();
     }
   });
+})();
+</script>
+
+<script>
+(function(){
+  var q = new URLSearchParams(window.location.search);
+  function set(id,v){ var el=document.getElementById(id); if(el&&v) el.value=v; }
+  set('f_source', q.get('utm_source'));
+  set('f_day', q.get('utm_content'));
+  set('f_campaign', q.get('utm_campaign'));
 })();
 </script>
 </body>
