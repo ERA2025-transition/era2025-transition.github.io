@@ -290,7 +290,8 @@
   var q = new URLSearchParams(window.location.search);
   function set(id,v){ var el=document.getElementById(id); if(el&&v) el.value=v; }
   set('f_source', q.get('utm_source'));
-  set('f_day', q.get('utm_content'));
+  var d=new Date(), p=function(n){return (n<10?'0':'')+n;};
+  set('f_day', d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate()));
   set('f_campaign', q.get('utm_campaign'));
 })();
 </script>
