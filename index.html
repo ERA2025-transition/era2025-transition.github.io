@@ -39,25 +39,6 @@
   .arw { color:#C89B8C; font-size:24px; font-weight:300; } .social-row { display:flex; justify-content:center; gap:14px; margin-top:2px; } .social-row .link { flex:0 0 auto; width:44px; height:44px; padding:0; border-radius:50%; justify-content:center; } .social-row .txt, .social-row .arw { display:none; }
   footer { margin-top:30px; font-size:11.5px; letter-spacing:2px; color:#7D8A6A; text-transform:uppercase; }
   .spark { color:#C9A36A; }
-
-  /* --- Travel Deals accordion --- */
-  .deals-toggle { width:100%; font-family:inherit; text-align:left; cursor:pointer; }
-  .deals-toggle .arw { transition:transform .2s ease; }
-  .deals-toggle[aria-expanded="true"] .arw { transform:rotate(90deg); }
-  .deals-panel { background:#fff; border:1.5px solid #EAD9D0; border-radius:16px;
-    padding:4px 18px 16px; margin-top:-6px; box-shadow:0 4px 14px rgba(69,60,52,.05); text-align:left; }
-  .deals-group { font-family:'Lora',serif; font-size:10.5px; letter-spacing:2.5px;
-    text-transform:uppercase; color:#7D8A6A; margin:16px 0 2px; }
-  .deal-row { display:flex; align-items:center; gap:10px; text-decoration:none;
-    color:#453C34; padding:9px 0; border-bottom:1px solid #F4EBE3; }
-  .deal-row:hover .deal-city { color:#B87A5E; }
-  .deals-panel .deal-row:last-of-type { border-bottom:0; }
-  .deal-city { font-family:'Lora',serif; font-weight:600; font-size:14.5px; flex:0 0 auto; }
-  .deal-off { flex:1; font-size:11.5px; color:#B87A5E; }
-  .deal-arw { color:#C89B8C; font-size:20px; font-weight:300; }
-  .deals-all { display:inline-block; margin-top:16px; font-size:13px; font-weight:500;
-    color:#B87A5E; text-decoration:none; border-bottom:1px solid #E3CFC2; padding-bottom:2px; }
-  .deals-note { font-size:10.5px; color:#9A8C7F; line-height:1.5; margin-top:14px; }
 </style>
 </head>
 <body>
@@ -107,29 +88,11 @@
       <span class="txt"><span class="t1">Plan Your Mykonos Trip</span><span class="t2">Free guide + flights, hotels &amp; experiences</span></span>
       <span class="arw">&#8250;</span>
     </a>
-    <button class="link deals-toggle" type="button" id="dealsToggle" aria-expanded="false" aria-controls="dealsPanel" style="border-color:#C9A36A;background:linear-gradient(180deg,#FFFDF8,#FBF3E4);">
+    <a class="link" href="deals.html" style="border-color:#C9A36A;background:linear-gradient(180deg,#FFFDF8,#FBF3E4);">
       <span class="ico" style="font-size:22px">&#127903;</span>
       <span class="txt"><span class="t1">Travel Deals</span><span class="t2">Honest verdicts on city passes</span></span>
       <span class="arw">&#8250;</span>
-    </button>
-    <div class="deals-panel" id="dealsPanel" hidden>
-        <div class="deals-group">Spain</div>
-        <a class="deal-row" href="https://gocity.tpm.lv/M75LYeMK" target="_blank" rel="nofollow sponsored noopener" data-expires="2026-09-07" data-fallback-href="https://gocity.com/"><span class="deal-city">Madrid</span><span class="deal-off" data-expires="2026-09-07">10% off &middot; to Sep 7</span><span class="deal-arw">&#8250;</span></a>
-        <a class="deal-row" href="https://gocity.tpm.lv/M75LYeMK" target="_blank" rel="nofollow sponsored noopener" data-expires="2026-09-07" data-fallback-href="https://gocity.com/"><span class="deal-city">Barcelona</span><span class="deal-off" data-expires="2026-09-07">10% off &middot; to Sep 7</span><span class="deal-arw">&#8250;</span></a>
-        <div class="deals-group">UK &amp; Ireland</div>
-        <a class="deal-row" href="https://gocity.tpm.lv/yHKGVK1d" target="_blank" rel="nofollow sponsored noopener" data-expires="2026-08-31" data-fallback-href="https://gocity.com/"><span class="deal-city">London</span><span class="deal-off" data-expires="2026-08-31">$20/&pound;15/&euro;17 off &middot; to Aug 31</span><span class="deal-arw">&#8250;</span></a>
-        <a class="deal-row" href="https://gocity.tpm.lv/M75LYeMK" target="_blank" rel="nofollow sponsored noopener" data-expires="2026-09-07" data-fallback-href="https://gocity.com/"><span class="deal-city">Dublin</span><span class="deal-off" data-expires="2026-09-07">10% off &middot; to Sep 7</span><span class="deal-arw">&#8250;</span></a>
-        <div class="deals-group">United States</div>
-        <a class="deal-row" href="https://gocity.tpm.lv/YDYJ395n" target="_blank" rel="nofollow sponsored noopener" data-expires="2026-09-07" data-fallback-href="https://gocity.com/"><span class="deal-city">New York</span><span class="deal-off" data-expires="2026-09-07">Up to 10% off &middot; to Sep 7</span><span class="deal-arw">&#8250;</span></a>
-        <a class="deal-row" href="https://gocity.tpm.lv/YDYJ395n" target="_blank" rel="nofollow sponsored noopener" data-expires="2026-09-07" data-fallback-href="https://gocity.com/"><span class="deal-city">Boston</span><span class="deal-off" data-expires="2026-09-07">Up to 10% off &middot; to Sep 7</span><span class="deal-arw">&#8250;</span></a>
-        <a class="deal-row" href="https://gocity.tpm.lv/YDYJ395n" target="_blank" rel="nofollow sponsored noopener" data-expires="2026-09-07" data-fallback-href="https://gocity.com/"><span class="deal-city">San Francisco</span><span class="deal-off" data-expires="2026-09-07">Up to 10% off &middot; to Sep 7</span><span class="deal-arw">&#8250;</span></a>
-        <div class="deals-group">Elsewhere</div>
-        <a class="deal-row" href="https://gocity.tpm.lv/M75LYeMK" target="_blank" rel="nofollow sponsored noopener" data-expires="2026-09-07" data-fallback-href="https://gocity.com/"><span class="deal-city">Prague</span><span class="deal-off" data-expires="2026-09-07">10% off &middot; to Sep 7</span><span class="deal-arw">&#8250;</span></a>
-        <a class="deal-row" href="https://gocity.tpm.lv/M75LYeMK" target="_blank" rel="nofollow sponsored noopener" data-expires="2026-09-07" data-fallback-href="https://gocity.com/"><span class="deal-city">Stockholm</span><span class="deal-off" data-expires="2026-09-07">10% off &middot; to Sep 7</span><span class="deal-arw">&#8250;</span></a>
-        <a class="deal-row" href="https://gocity.tpm.lv/M75LYeMK" target="_blank" rel="nofollow sponsored noopener" data-expires="2026-09-07" data-fallback-href="https://gocity.com/"><span class="deal-city">Sydney</span><span class="deal-off" data-expires="2026-09-07">10% off &middot; to Sep 7</span><span class="deal-arw">&#8250;</span></a>
-        <a class="deals-all" href="deals.html">See the full verdicts &#8250;</a>
-        <p class="deals-note">Affiliate links &mdash; I may earn a small commission at no extra cost to you. Every verdict is my own.</p>
-    </div>
+    </a>
     <div class="social-row"><a class="link" href="https://www.youtube.com/@traveladventuresbyeunice" target="_blank" rel="noopener">
       <span class="ico"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M23 12s0-3.7-.5-5.4a2.8 2.8 0 0 0-2-2C18.7 4 12 4 12 4s-6.7 0-8.5.6a2.8 2.8 0 0 0-2 2C1 8.3 1 12 1 12s0 3.7.5 5.4a2.8 2.8 0 0 0 2 2C5.3 20 12 20 12 20s6.7 0 8.5-.6a2.8 2.8 0 0 0 2-2C23 15.7 23 12 23 12z" fill="#B87A5E"/><path d="M9.8 15.5v-7l6 3.5z" fill="#F7F0E8"/></svg></span>
       <span class="txt"><span class="t1">YouTube</span><span class="t2">Watch the adventures</span></span>
@@ -156,29 +119,5 @@
     </nav>
     <footer><span class="spark">&#10022;</span>&nbsp; Travel Adventures by Eunice &nbsp;<span class="spark">&#10022;</span></footer>
   </main>
-<script>
-  (function () {
-    var btn = document.getElementById('dealsToggle');
-    var panel = document.getElementById('dealsPanel');
-    if (btn && panel) {
-      btn.addEventListener('click', function () {
-        var open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        panel.hidden = open;
-      });
-    }
-    // Expired offers: drop the discount label and fall back to a plain link.
-    var today = new Date(); today.setHours(0, 0, 0, 0);
-    document.querySelectorAll('.deal-off[data-expires]').forEach(function (el) {
-      if (today > new Date(el.getAttribute('data-expires') + 'T00:00:00')) el.textContent = '';
-    });
-    document.querySelectorAll('.deal-row[data-expires]').forEach(function (a) {
-      if (today > new Date(a.getAttribute('data-expires') + 'T00:00:00')) {
-        var f = a.getAttribute('data-fallback-href');
-        if (f) a.setAttribute('href', f);
-      }
-    });
-  })();
-</script>
 </body>
 </html>
