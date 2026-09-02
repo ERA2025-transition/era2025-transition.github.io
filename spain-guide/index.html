@@ -151,6 +151,10 @@
         </div>
         <input type="hidden" name="locale" value="en">
         <input type="hidden" name="html_type" value="simple">
+        <input type="hidden" id="UTM_SOURCE"   name="UTM_SOURCE"   value="">
+        <input type="hidden" id="UTM_MEDIUM"   name="UTM_MEDIUM"   value="">
+        <input type="hidden" id="UTM_CAMPAIGN" name="UTM_CAMPAIGN" value="">
+        <input type="hidden" id="UTM_CONTENT"  name="UTM_CONTENT"  value="">
         <input type="hidden" name="SOURCE" id="f_source" value="direct">
         <input type="hidden" name="LEAD_DAY" id="f_day" value="">
         <input type="hidden" name="CAMPAIGN" id="f_campaign" value="spain2026">
@@ -293,6 +297,23 @@
   var d=new Date(), p=function(n){return (n<10?'0':'')+n;};
   set('f_day', d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate()));
   set('f_campaign', q.get('utm_campaign'));
+})();
+</script>
+<script>
+(function () {
+  var KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+  var q = new URLSearchParams(window.location.search);
+  KEYS.forEach(function (k) {
+    var v = q.get(k);
+    try {
+      if (v) sessionStorage.setItem(k, v);
+      else v = sessionStorage.getItem(k);
+    } catch (e) {}
+    var el = document.getElementById(k.toUpperCase());
+    if (!el) return;
+    if (v) el.value = v;
+    else el.disabled = true;   // omit empty fields; never blank an existing value
+  });
 })();
 </script>
 </body>
