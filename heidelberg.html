@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heidelberg Christmas Markets | Travel Adventures by Eunice</title>
+<meta name="description" content="Five Christmas markets from one cozy Heidelberg base: Heidelberg, Schwetzingen, Speyer, Mannheim and Weinheim. Plan and book the festive days out.">
+<style>
+  :root{--bg:#171210;--panel:#211a16;--line:#3a2e26;--text:#f3ebe1;--muted:#c3b4a4;--gold:#d7b25f;--arrow:#d7b25f}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:40px 20px 64px}
+  .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--gold);margin:0 0 10px}
+  h1{font-size:30px;line-height:1.15;margin:0 0 10px}
+  .lede{color:var(--muted);font-size:17px;margin:0 0 8px}
+  .disclosure{color:var(--muted);font-size:13px;margin:18px 0 28px;padding-top:14px;border-top:1px solid var(--line)}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;margin:0 0 16px}
+  .card h2{font-size:18px;margin:0 0 6px}
+  .card p{color:var(--muted);font-size:15px;margin:0 0 16px}
+  .cta{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:var(--bg);background:var(--gold);text-decoration:none;padding:11px 16px;border-radius:10px}
+  .cta .arrow{font-size:16px}
+  .back{display:inline-block;margin-top:14px;color:var(--muted);text-decoration:none;font-size:14px}
+  .foot{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+  @media(min-width:600px){h1{font-size:36px}}
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="kicker">❄ Christmas Market Trail</p>
+    <h1>Heidelberg &amp; Rhine-Neckar Christmas Markets</h1>
+    <p class="lede">Five Christmas markets from one cozy base: Heidelberg, Schwetzingen, Speyer, Mannheim and Weinheim. Stay in one place and reach all of them without changing hotels every night.</p>
+    <p class="disclosure">Some links on this page are affiliate links. I may earn a small commission if you book, at no extra cost to you. Thank you for supporting Travel Adventures by Eunice.</p>
+
+    <div class="card">
+      <h2>Heidelberg Christmas market tours</h2>
+      <p>Old Town market stalls along the river with the castle lit up above. Guided market walks run through the season, from late November into late December.</p>
+      <a class="cta" href="https://www.getyourguide.com/heidelberg-l24/christmas-market-tours-tc2182/?partner_id=X3GIW5S" rel="nofollow sponsored">See Heidelberg market tours <span class="arrow">→</span></a>
+    </div>
+
+    <div class="card">
+      <h2>Heidelberg after dark</h2>
+      <p>A Night Watchman group walk through the lantern-lit stalls, the market the way it looked a few centuries ago.</p>
+      <a class="cta" href="https://www.getyourguide.com/activity/heidelberg-l24/heidelberg-weihnachtsmarkt-gruppentour-mit-night-watchman-t202150?partner_id=X3GIW5S" rel="nofollow sponsored">Book the Night Watchman walk <span class="arrow">→</span></a>
+    </div>
+
+    <div class="card">
+      <h2>Rhine-Neckar day trips</h2>
+      <p>Four more markets within easy reach of a Heidelberg base: Schwetzingen, Speyer, Mannheim and Weinheim. Pick a guided day out and let someone else handle the logistics.</p>
+      <a class="cta" href="https://www.getyourguide.com/baden-wurttemberg-l628/christmas-market-tours-tc2182/?partner_id=X3GIW5S" rel="nofollow sponsored">See regional market tours <span class="arrow">→</span></a>
+    </div>
+
+    <div class="card">
+      <h2>More things to do</h2>
+      <p>Tours, tickets and experiences across the Rhine-Neckar towns, hand-picked in our shop.</p>
+      <a class="cta" href="https://www.viator.com/partner-shop/adventureseunice" rel="nofollow sponsored">Browse the Viator shop <span class="arrow">→</span></a>
+    </div>
+
+    <a class="back" href="index.html">← Back to Travel Adventures by Eunice</a>
+    <p class="foot">Travel Adventures by Eunice · Rosado Management Solutions Inc.</p>
+  </main>
+
+<script>
+/* Content-type attribution: stamp inbound utm_campaign + utm_content onto affiliate links.
+   GetYourGuide -> &cmp=   Travelpayouts (tp.media / tpm.lv) -> &sub_id= */
+(function () {
+  try {
+    var p = new URLSearchParams(window.location.search);
+    var camp = (p.get('utm_campaign') || '').replace(/[^a-z0-9_-]/gi,'').slice(0,40);
+    var cont = (p.get('utm_content') || '').replace(/[^a-z0-9_-]/gi,'').slice(0,40);
+    var code = [camp, cont].filter(Boolean).join('-') || 'direct';
+    document.querySelectorAll('a.cta[href]').forEach(function (a) {
+      var href = a.getAttribute('href') || '';
+      var isGyg = href.indexOf('getyourguide.com') !== -1;
+      var isTp = /tp\.media|tpm\.lv|travelpayouts/.test(href);
+      if (!isGyg && !isTp) return;
+      var key = isGyg ? 'cmp' : 'sub_id';
+      if (new RegExp('[?&]'+key+'=').test(href)) return;
+      a.setAttribute('href', href + (href.indexOf('?')===-1?'?':'&') + key + '=' + encodeURIComponent(code));
+    });
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
